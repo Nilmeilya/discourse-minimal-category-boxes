@@ -73,7 +73,6 @@ export default class extends Component {
 
           {{#if @category.isGrandParent}}
             {{#each @category.subcategories as |subcategory|}}
-Grandparent Subcategory
               <a
                 href={{subcategory.url}}
                 data-category-id={{subcategory.id}}
@@ -100,19 +99,20 @@ Grandparent Subcategory
               </a>
             {{/each}}
           {{else if @category.subcategories}}
-Subcategory
             <div class="subcategories">
+Test Subcategory
               {{#each @category.subcategories as |sc|}}
+Subcat
                 <a class="subcategory" href={{sc.url}}>
                   <span class="subcategory-image-placeholder">
                     <CategoryLogo @category={{sc}} />
                   </span>
+Link
                   {{categoryLink sc hideParent="true"}}
                 </a>
               {{/each}}
             </div>
           {{/if}}
-End
         </div>
 
         <PluginOutlet
