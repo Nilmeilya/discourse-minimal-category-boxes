@@ -102,9 +102,6 @@ export default class extends Component {
             <div class="subcategories">
               {{#each @category.subcategories as |sc|}}
                 <a class="subcategory" href={{sc.url}}>
-                  <span class="subcategory-image-placeholder">
-                    <CategoryLogo @category={{sc}} />
-                  </span>
                   {{categoryLink sc hideParent="true"}}
                 </a>
               {{/each}}
