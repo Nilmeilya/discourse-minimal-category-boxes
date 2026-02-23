@@ -62,7 +62,7 @@ export default class extends Component {
                 {{#if @category.read_restricted}}
                   {{icon "lock"}}
                 {{/if}}
-                {{@category.name}}
+                {{@category.name}} -- Test 2!
               </h3>
             </a>
           </div>
