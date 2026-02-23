@@ -100,14 +100,11 @@ export default class extends Component {
             {{/each}}
           {{else if @category.subcategories}}
             <div class="subcategories">
-Test Subcategory
               {{#each @category.subcategories as |sc|}}
-Subcat
                 <a class="subcategory" href={{sc.url}}>
                   <span class="subcategory-image-placeholder">
                     <CategoryLogo @category={{sc}} />
                   </span>
-Link
                   {{categoryLink sc hideParent="true"}}
                 </a>
               {{/each}}
