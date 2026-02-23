@@ -62,7 +62,7 @@ export default class extends Component {
                 {{#if @category.read_restricted}}
                   {{icon "lock"}}
                 {{/if}}
-                {{@category.name}} -- Test 2!
+                {{@category.name}}
               </h3>
             </a>
           </div>
@@ -73,6 +73,7 @@ export default class extends Component {
 
           {{#if @category.isGrandParent}}
             {{#each @category.subcategories as |subcategory|}}
+Grandparent Subcategory
               <a
                 href={{subcategory.url}}
                 data-category-id={{subcategory.id}}
@@ -99,6 +100,7 @@ export default class extends Component {
               </a>
             {{/each}}
           {{else if @category.subcategories}}
+Subcategory
             <div class="subcategories">
               {{#each @category.subcategories as |sc|}}
                 <a class="subcategory" href={{sc.url}}>
@@ -110,6 +112,7 @@ export default class extends Component {
               {{/each}}
             </div>
           {{/if}}
+End
         </div>
 
         <PluginOutlet
